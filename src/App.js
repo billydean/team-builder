@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Form from './Form';
 
 // setting up initial form values to use later
 const initialValues = {
@@ -28,9 +29,11 @@ function App() {
   }
   return (
     <div className="App">
-      {/* <Form 
-      
-      /> */}
+      <Form 
+      update={ update }
+      submit={ submit }
+      values={ values }
+      />
       {team.forEach(member => {
         return (
           <div>
