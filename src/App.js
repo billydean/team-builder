@@ -24,10 +24,12 @@ function App() {
       email: values.email.trim(),
       role: values.role
     };
+    if (!member.name || !member.email || !member.role) {
+      return;
+    };
     setTeam([member, ...team]);
     setValues(initialValues);
   }
-  console.log(team);
   return (
     <div className="App">
       <Form 
@@ -35,16 +37,17 @@ function App() {
       submit={ submit }
       values={ values }
       />
-      {team.forEach(member => {
-        console.log(member);
-        return (
-          <div>
-            <h3>{member.name}</h3>
-            <p>{member.role}</p>
-            <p>{member.email}</p>
-          </div>
-        )
-      })}
+    {
+    team.map(member => {
+       return (
+         <div>
+           <h3>{member.name}</h3>
+           <p>{member.role}</p>
+           <p>{member.email}</p>            
+         </div>
+       )
+     })
+    }
     </div>
   );
 }
