@@ -24,9 +24,10 @@ function App() {
       email: values.email.trim(),
       role: values.role
     };
-    setTeam([...team, member]);
+    setTeam([member, ...team]);
     setValues(initialValues);
   }
+  console.log(team);
   return (
     <div className="App">
       <Form 
@@ -35,6 +36,7 @@ function App() {
       values={ values }
       />
       {team.forEach(member => {
+        console.log(member);
         return (
           <div>
             <h3>{member.name}</h3>

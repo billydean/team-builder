@@ -36,12 +36,12 @@ function Form(props) {
             <label>Role
                 <select value={values.role} name="role" onChange={change}>
                     <option value="">-- Select A Role --</option>
-                    <option value="dm">Dungeon Master</option>
-                    <option value="spelunker">Spelunker</option>
-                    <option value="herbalist">Herbalist</option>
-                    <option value="gg">Gamer Girl</option>
-                    <option value="himbo">Himbo</option>
-                    <option value="grover">Grover Cleveland</option>
+                    <option value="Dungeon Master">Dungeon Master</option>
+                    <option value="Spelunker">Spelunker</option>
+                    <option value="Herbalist">Herbalist</option>
+                    <option value="Gamer Girl">Gamer Girl</option>
+                    <option value="Himbo">Himbo</option>
+                    <option value="Grover Cleveland">Grover Cleveland</option>
                 </select>
             </label>
             <div>
